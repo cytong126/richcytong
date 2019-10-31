@@ -1,0 +1,14 @@
+1.下载并执行SourceTreeSetup-3.2.6.exe，会进入登录Bitbucket界面
+2.关闭界面。
+3.在C:\Users\Administrator\AppData\Local\Atlassian\SourceTree路径下 添加accounts.json 文件
+4.C:\Users\Administrator\AppData\Local\Atlassian\SourceTree.exe_Url_n222km3wptgdvxwmgelnuodyl5shfgjb\3.2.6.3544 修改 user.config
+添加
+ <setting name="AgreedToEULA" serializeAs="String">
+        <value>True</value>
+</setting>
+<setting name="AgreedToEULAVersion" serializeAs="String">
+        <value>20160201</value>
+</setting>
+5.再次执行安装。选择不安装 Mercurial
+
+PS：在安装SourceTree之前先安装好本地Git.

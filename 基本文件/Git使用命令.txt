@@ -1,0 +1,22 @@
+
+git add *
+(*可替换成具体要上传的文件名，*表示提交所有有变化的文件)
+上传修改的文件
+
+git commit -m "<name>" 
+（”test“为分支名）
+
+git branch <name>
+创建分支
+
+git checkout <name>
+切换分支
+
+git push -u origin <name>
+将分支上传
+
+git pull
+获取当前分支最新代码
+
+git merge <name>
+合并某分支到当前分支
