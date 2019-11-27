@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wang.boot.pt.parttimes.partcategory.mapper.PartCategoryMapper">
+
+    <resultMap id="partCategory" type="com.wang.boot.pt.parttimes.partcategory.dto.PartCategoryDto">
+        <id column="category_name" jdbcType="VARCHAR" property="categoryName"/>
+        <result column="category_type" jdbcType="INTEGER" property="categoryType"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="status" jdbcType="INTEGER" property="status"/>
+        <result column="sort" jdbcType="INTEGER" property="sort"/>
+
+    </resultMap>
+
+   <select id="selectByCategoryType" resultMap="partCategory" parameterType="com.wang.boot.pt.parttimes.partcategory.dto.PartCategoryDto">
+        select category_name,category_type,create_time,status,sort from part_category where category_type=#{categoryType , jdbcType=INTEGER}
+   </select>
+
+
+
+    <select id="selectByCategoryType2" resultMap="partCategory" parameterType="java.lang.Integer">
+        select category_name,category_type,create_time,status,sort from part_category where category_type=#{categoryType , jdbcType=INTEGER}
+   </select>
+
+
+
+</mapper>
